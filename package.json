@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "name": "odin-to-do-app",
+  "description": "This is a simple to do app, part of my learning journey at The Odin Project",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ToDoApp"
+  ],
+  "author": "twapor",
+  "license": "ISC"
+}
