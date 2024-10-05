@@ -1,0 +1,1 @@
+This is a simple to do app, part of my learning journey at The Odin Project 
