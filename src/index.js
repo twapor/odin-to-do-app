@@ -1,11 +1,6 @@
 import { Task } from "./createToDo.js";
+import { storage } from "./getToDo.js";
+import { saveToLocalStorage } from "./setToDo.js";
 
-const firstTask = new Task("First task", "Example task", "12-10-2024", "Medium", false);
-
-console.log(firstTask);
-
-firstTask.editTaskParameter("title", "Edited first task");
-
-firstTask.editIsDone();
-
-console.log(firstTask);
+console.log("Loaded from storage");
+console.log(storage);
