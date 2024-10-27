@@ -1,62 +1,19 @@
-function createToDo (title, description, dueDate, priority = "Medium") {
-    
-    let taskTitle = title;
-    let taskDescription = description;
-    let taskDueDate = dueDate;
-    let taskPriority = priority;
-    let isDone = false;
-    
-    //Functions to manipulate the task
-    const editTitle = (newTitle) => {
-        taskTitle = newTitle;
+class Task {
+    constructor (title, description, dueDate, priority, isDone) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
+        this.isDone = isDone;
     }
 
-    const editDescription = (newDescription) => {
-        taskDescription = newDescription;
+    editIsDone () {
+        this.isDone = !this.isDone;
     }
 
-    const editDueDate = (newDueDate) => {
-        taskDueDate = newDueDate;
+    editTaskParameter (parameter, value) {
+        this[parameter] = value;
     }
-
-    const editPriority = (newPriority) => {
-        taskPriority = newPriority;
-    }
-
-    const editDoneStatus = ()=> {
-        if(isDone == false) {
-            isDone = true;
-        }
-
-        else {
-            isDone = false;
-        }
-    }
-
-    //Functions to get the parameters of the task
-    const getTitle = () => {
-        return taskTitle;
-    }
-
-    const getDescription = () => {
-        return taskDescription;
-    }
-
-    const getDueDate = () => {
-        return taskDueDate;
-    }
-
-    const getPriority = () => {
-        return taskPriority;
-    }
-
-    const getDoneStatus = () => {
-        return isDone;
-    }
-
-
-
-    return {editTitle, getTitle, editDescription, getDescription, editDueDate, getDueDate, editPriority, getPriority, editDoneStatus, getDoneStatus};
 }
 
-export {createToDo};
+export {Task};

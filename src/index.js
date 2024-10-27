@@ -1,21 +1,11 @@
-import { createToDo } from "./createToDo.js";
+import { Task } from "./createToDo.js";
 
-const firstTask = createToDo ("First task", "Example task", "12-10-2024");
+const firstTask = new Task("First task", "Example task", "12-10-2024", "Medium", false);
 
-console.log(firstTask.getTitle());
-console.log(firstTask.getDescription());
-console.log(firstTask.getDueDate());
-console.log(firstTask.getPriority());
-console.log(firstTask.getDoneStatus());
+console.log(firstTask);
 
-firstTask.editTitle("Edited first task");
-firstTask.editDescription("Edited example task");
-firstTask.editDueDate("00-00-0000");
-firstTask.editPriority("High");
-firstTask.editDoneStatus();
+firstTask.editTaskParameter("title", "Edited first task");
 
-console.log(firstTask.getTitle());
-console.log(firstTask.getDescription());
-console.log(firstTask.getDueDate());
-console.log(firstTask.getPriority());
-console.log(firstTask.getDoneStatus());
+firstTask.editIsDone();
+
+console.log(firstTask);
