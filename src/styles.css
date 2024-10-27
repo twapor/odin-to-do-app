@@ -1,11 +1,285 @@
 body {
-    background-color: #111827;
+    background-color: #00111C;
+    font-family: sans-serif;
 }
 
 h1 {
-    font-family: sans-serif;
     color: aliceblue;
     text-align: center;
     font-weight: bold;
     font-size: 5em;
+}
+
+#project-selector {
+    padding: 2vh 6vw;
+}
+
+h3 {
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+}
+
+#button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects-btn {
+    display: flex;
+    gap: 1em;
+    overflow: auto;
+    margin-right: 2em;
+}
+
+.project-selector-btn-active{
+    background-color: #2341ee;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    border-radius: 6px;
+    border-width: 0;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    flex-shrink: 0;
+}
+
+.project-selector-btn{
+    background-color: #4d4d4d;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    border-radius: 6px;
+    border-width: 0;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    flex-shrink: 0;
+}
+
+#filter {
+    padding: 2vh 6vw;
+}
+
+#completed-task-btn.active {
+    background-color: #074b01;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    border-radius: 6px;
+    border-width: 0;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#completed-task-btn {
+    background-color: #4d4d4d;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    border-radius: 6px;
+    border-width: 0;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#container {
+    padding: 0vh 5vw;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 20vw));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3vw;
+}
+
+.category {
+    font-weight: 700;
+    margin-top: 0.1em;
+    font-size: 0.9em;
+}
+
+.task {
+    padding: 2em 4em;
+    border-radius: 2vw;
+    background-color: #002945;
+    color:aliceblue;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+#add-task-btn {
+    position: fixed;
+    top: 85%;
+    right: 10%;
+    height: 5em;
+    width: 10em;
+}
+
+.add-btn {
+    background-color: #66035e;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    border-radius: 6px;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.isDone-btn {
+    background-color: #2341ee;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    border-radius: 6px;
+    border-width: 0;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+h2 {
+    margin-bottom: 0.2em;
+    font-size: 1.8em;
+    margin-top: 0em;
+}
+
+p {
+    margin-top: 0em;
+    margin-bottom: 0.8em;
+    font-size: 0.8em;
+}
+
+@media (max-width: 2000px) {
+    
+    #container {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+
+    .task {
+        padding: 2em 3em;
+    }
+}
+
+
+@media (max-width: 1500px) {
+    
+    #container {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+
+    .task {
+        padding: 2em 2em;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    
+    #container {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+
+    .task {
+        padding: 2em 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    #container {
+        grid-template-columns: 1fr;
+        gap: 2em
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .task {
+        padding: 1.5em 1.5em;
+    }
 }
